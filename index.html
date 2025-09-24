@@ -12,10 +12,51 @@
       background: #ffe5e5; /* Light red background */
       color: #333;
     }
-    header {
-      background: #ff0000; /* Red header */
+
+    /* Navbar */
+    nav {
+      background: #ff0000;
+      padding: 10px 20px;
+    }
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+    }
+    nav ul li {
+      position: relative;
+    }
+    nav ul li a {
       color: #fff;
-      padding: 60px 20px;
+      text-decoration: none;
+      padding: 12px 20px;
+      display: block;
+    }
+    nav ul li:hover {
+      background: #cc0000;
+    }
+    nav ul li ul {
+      display: none;
+      position: absolute;
+      background: #ff0000;
+      top: 100%;
+      left: 0;
+      min-width: 180px;
+      z-index: 10;
+    }
+    nav ul li:hover ul {
+      display: block;
+    }
+    nav ul li ul li {
+      border-top: 1px solid #cc0000;
+    }
+
+    /* Hero (homepage only) */
+    header {
+      background: #ff0000;
+      color: #fff;
+      padding: 80px 20px;
       text-align: center;
     }
     header img {
@@ -40,6 +81,8 @@
       border-radius: 6px;
       font-weight: bold;
     }
+
+    /* Sections */
     section {
       max-width: 900px;
       margin: 50px auto;
@@ -49,13 +92,15 @@
     section h2 {
       font-size: 2rem;
       margin-bottom: 20px;
-      color: #ff0000; /* Red headings */
+      color: #ff0000;
     }
     section p {
       font-size: 1rem;
       line-height: 1.6;
       color: #555;
     }
+
+    /* Footer */
     footer {
       text-align: center;
       padding: 30px;
@@ -70,12 +115,34 @@
   </style>
 </head>
 <body>
+  <!-- Navigation -->
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li>
+        <a href="#">About Us</a>
+        <ul>
+          <li><a href="about.html">Who We Are</a></li>
+          <li><a href="team.html">Our Team</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">Services</a>
+        <ul>
+          <li><a href="services.html">What We Do</a></li>
+          <li><a href="ads.html">Paid Ads</a></li>
+        </ul>
+      </li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
   <!-- Hero -->
   <header>
     <img src="jimmy focus logo.png" alt="Jimmy Focus Logo">
     <h1>Jimmy Focus</h1>
-    <p>Digital Marketing & Promotions 🚀</p>
-    <a href="#book">📅 Book a Call</a>
+    <p>Digital Marketing & Promotions</p>
+    <a href="#book">Book a Call</a>
   </header>
 
   <!-- About -->
@@ -92,35 +159,31 @@
   <section>
     <h2>Our Services</h2>
     <p>
-      At Jimmy Focus, we help businesses grow by connecting them with the right audience 
-      through powerful digital marketing strategies. We specialize in paid ads across 
-      major platforms, including Meta (Facebook & Instagram), Google, TikTok, and YouTube.
+      We help businesses grow by connecting them with the right audience through powerful 
+      digital marketing strategies. We specialize in paid ads across Meta, Google, TikTok, 
+      and YouTube.
     </p>
-    <p><strong>Our services are designed to:</strong></p>
     <ul style="text-align:left; max-width:700px; margin:20px auto; line-height:1.8;">
-      <li>✅ Increase your brand visibility</li>
-      <li>✅ Drive quality traffic to your business</li>
-      <li>✅ Generate more leads and sales</li>
-      <li>✅ Improve your overall online presence</li>
+      <li>Increase your brand visibility</li>
+      <li>Drive quality traffic to your business</li>
+      <li>Generate more leads and sales</li>
+      <li>Improve your overall online presence</li>
     </ul>
     <p>
       Whether you’re a local brick-and-mortar store or a growing online brand, our campaigns 
-      are customized to your goals. With years of experience in marketing, we focus on 
-      data-driven strategies and creative content that deliver real, measurable results.
+      are customized to your goals. We focus on data-driven strategies and creative content 
+      that deliver measurable results.
     </p>
-    <p><strong>Partner with us and let’s turn your clicks into loyal customers.</strong></p>
   </section>
 
   <!-- Booking Section -->
   <section id="book">
     <h2>Book a Call</h2>
-    <!-- Calendly inline widget begin -->
     <div class="calendly-inline-widget"
          data-url="https://calendly.com/jimmyfocus/digital-marketing"
          style="min-width:320px;height:700px;">
     </div>
     <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
-    <!-- Calendly inline widget end -->
   </section>
 
   <!-- Contact -->
@@ -133,7 +196,7 @@
   <!-- Footer -->
   <footer>
     <p>© 2025 Jimmy Focus. All Rights Reserved.</p>
-    <p><a href="#book">📅 Schedule a Call</a></p>
+    <p><a href="#book">Schedule a Call</a></p>
   </footer>
 </body>
 </html>
