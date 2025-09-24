@@ -9,11 +9,30 @@
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
-      background: #ffe5e5; /* Light red background */
+      background: #fff0f0; /* light red background */
       color: #333;
     }
+    /* Navigation */
+    nav {
+      background: #c62828; /* red */
+      padding: 15px;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 20px;
+      font-weight: bold;
+      font-size: 1.1rem;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
     header {
-      background: #ff0000; /* Red header */
+      background: #b71c1c; /* dark red */
       color: #fff;
       padding: 60px 20px;
       text-align: center;
@@ -34,7 +53,7 @@
     header a {
       display: inline-block;
       background: #fff;
-      color: #ff0000;
+      color: #b71c1c;
       text-decoration: none;
       padding: 12px 24px;
       border-radius: 6px;
@@ -49,7 +68,7 @@
     section h2 {
       font-size: 2rem;
       margin-bottom: 20px;
-      color: #ff0000; /* Red headings */
+      color: #b71c1c;
     }
     section p {
       font-size: 1rem;
@@ -77,13 +96,22 @@
       color: #fff;
     }
     footer a {
-      color: #ff0000;
+      color: #b71c1c;
       text-decoration: none;
       font-weight: bold;
     }
   </style>
 </head>
 <body>
+
+  <!-- Navigation -->
+  <nav>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#book">Book</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
   <!-- Hero -->
   <header>
     <img src="jimmy focus logo.png" alt="Jimmy Focus Logo">
@@ -92,31 +120,32 @@
     <a href="#book">📅 Book a Call</a>
   </header>
 
-  <!-- About -->
-  <section>
+  <!-- About Us -->
+  <section id="about">
     <h2>About Us</h2>
     <p>
-      At Jimmy Focus, we help businesses grow through digital marketing, music promotions,
-      and advertising solutions that get real results. With years of experience,
-      we specialize in connecting brands with their audience effectively.
+      Jimmy Focus is a full-service digital marketing and promotions agency dedicated to helping businesses, artists, and entrepreneurs grow their presence online. 
+      With over 10 years of experience in digital marketing, social media campaigns, music promotions, and paid advertising on platforms like Meta, Google, TikTok, and YouTube, 
+      we create strategies that drive real results. Our mission is to connect brands to the right audience, boost engagement, and maximize growth opportunities. 
+      Whether you're a brick-and-mortar business or an online venture, we deliver tailored campaigns designed to achieve your goals efficiently and effectively.
     </p>
   </section>
 
   <!-- Services -->
-  <section>
+  <section id="services">
     <h2>Our Services</h2>
     <div class="services">
       <div class="service-box">
         <h3>🎯 Digital Marketing</h3>
-        <p>Boost your business visibility with SEO, social media ads, and Google campaigns.</p>
+        <p>Boost your business visibility with SEO, social media ads, Google campaigns, and paid ads across multiple platforms.</p>
       </div>
       <div class="service-box">
         <h3>🎶 Music Promotions</h3>
-        <p>Helping artists grow by connecting them to fans worldwide with strategic campaigns.</p>
+        <p>Helping artists grow by connecting them to fans worldwide with strategic campaigns and online promotions.</p>
       </div>
       <div class="service-box">
         <h3>📈 Brand Growth</h3>
-        <p>From brick-and-mortar businesses to online ventures, we create strategies that scale.</p>
+        <p>From brick-and-mortar businesses to online ventures, we create strategies that scale and increase sales.</p>
       </div>
     </div>
   </section>
@@ -134,7 +163,7 @@
   </section>
 
   <!-- Contact -->
-  <section>
+  <section id="contact">
     <h2>Contact Us</h2>
     <p>Email: <a href="mailto:itsjimmyfocus@gmail.com">itsjimmyfocus@gmail.com</a></p>
     <p>Instagram: <a href="https://instagram.com/jimmyfocustr" target="_blank">@jimmyfocustr</a></p>
@@ -145,5 +174,6 @@
     <p>© 2025 Jimmy Focus. All Rights Reserved.</p>
     <p><a href="#book">📅 Schedule a Call</a></p>
   </footer>
+
 </body>
 </html>
